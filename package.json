@@ -1,6 +1,6 @@
 {
-  "homepage": "http://belen-dominguez.github.io/React_TP-Movie",
-  "name": "movie-app",
+  "homepage": "http://belen-dominguez.github.io/React_TP-Movies",
+  "name": "movies-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
