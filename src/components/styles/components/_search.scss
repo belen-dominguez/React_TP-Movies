@@ -1,0 +1,20 @@
+.search {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1rem;
+
+    svg {
+        font-size: 3rem;
+        color: #fff;
+        margin-right: 1rem;
+        font-weight: 300;
+    }
+    input {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2.5rem;
+        
+    }
+}

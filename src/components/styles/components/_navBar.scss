@@ -1,0 +1,36 @@
+.navBar {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    a {
+
+        svg {
+            color: #fff;
+            font-size: 3rem;
+        }
+
+    }
+}
+
+.navDetail {
+    width: 40%;
+    margin: 3rem auto 7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+    .navBar {
+        position: fixed;
+        bottom: 0;
+        background-color: black;
+        width: 100%;
+        z-index: 1;
+        margin: 0;
+        left: 0;
+        height: 6rem;
+        padding: 0 3rem;
+    } 
+ }

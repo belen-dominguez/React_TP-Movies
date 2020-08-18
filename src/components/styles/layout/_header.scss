@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    background-color: #23272a;
+    padding: 2rem;
+
+
+
+}
+
+@media (max-width: 450px) {
+   header {
+       position: relative;
+       padding: 1rem;
+   } 
+}

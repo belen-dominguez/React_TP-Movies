@@ -1,0 +1,27 @@
+.info-container{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem 3rem;
+    
+    .info-img{
+        max-width: 35%;
+        margin-right: 2rem;
+        height: 100%;
+    }
+    .item-info {
+        width: 60%;
+        
+        h4 {
+            margin: 0 0 2rem 0;
+            
+        }
+    }
+    p {
+        margin: 2rem 0;
+    }
+    svg, a {
+        color: rgb(33, 150, 243);
+    }
+    
+}

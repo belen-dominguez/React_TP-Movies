@@ -1,0 +1,17 @@
+.character {
+    //width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    img {
+        width: 30%;
+    }
+    .character-info {
+        width: 60%;
+    }
+}

@@ -1,0 +1,29 @@
+.paginacion {
+    margin: 2rem;
+    text-align: center;
+
+    .active {
+        background-color: grey;
+    }
+    .pagina{
+        margin: .5rem;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: grey; 
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    
+ }

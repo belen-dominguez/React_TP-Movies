@@ -1,0 +1,17 @@
+.hero {
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+   
+   
+}
+
+@media (max-width: 450px) {
+    .hero {
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+       
+       
+    }
+}

@@ -1,0 +1,68 @@
+.seasons {
+    position: relative;
+    width: max-content;
+    .season-select {
+        margin: 2rem;
+        padding: 1rem 2rem;
+        border: #fff;
+        background-color: #23272a;
+        color: #fff;
+        border-radius: 7px;
+        appearance: none;
+        font-size: 1.8rem;
+        width: 16rem;
+        cursor: pointer;
+        
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 7px;
+        height: 7px;
+        top: 50%;
+        right: 36px;
+        transform: translateY(-50%) rotateZ(-135deg);
+        border-top: 2px solid rgb(220, 221, 222);
+        border-left: 2px solid rgb(220, 221, 222);
+        box-sizing: border-box;
+    }
+}
+
+.episodes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    
+    
+    .episodes-results {
+        width: 45%;
+        margin: 1.5rem;
+
+        img {
+
+            &:hover{
+                transform: none;
+            }
+
+        }
+        .episodes-details {
+
+            p {
+                margin: 2rem 0;
+
+                span {
+                    color: rgb(33, 150, 243);
+                    
+                }
+            }
+            .episode-overview {
+                text-align: justify;
+                font-size: 1.5rem;
+            }
+            
+        }
+    }
+}
+
