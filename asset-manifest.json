@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React_TP-Movies/static/css/main.19bced56.chunk.css",
+    "main.js": "/React_TP-Movies/static/js/main.b3dc9fb2.chunk.js",
+    "main.js.map": "/React_TP-Movies/static/js/main.b3dc9fb2.chunk.js.map",
+    "runtime-main.js": "/React_TP-Movies/static/js/runtime-main.deb46eb0.js",
+    "runtime-main.js.map": "/React_TP-Movies/static/js/runtime-main.deb46eb0.js.map",
+    "static/js/2.2a4f3850.chunk.js": "/React_TP-Movies/static/js/2.2a4f3850.chunk.js",
+    "static/js/2.2a4f3850.chunk.js.map": "/React_TP-Movies/static/js/2.2a4f3850.chunk.js.map",
+    "index.html": "/React_TP-Movies/index.html",
+    "precache-manifest.2a846dac9e1234685a6312731a597991.js": "/React_TP-Movies/precache-manifest.2a846dac9e1234685a6312731a597991.js",
+    "service-worker.js": "/React_TP-Movies/service-worker.js",
+    "static/css/main.19bced56.chunk.css.map": "/React_TP-Movies/static/css/main.19bced56.chunk.css.map",
+    "static/js/2.2a4f3850.chunk.js.LICENSE.txt": "/React_TP-Movies/static/js/2.2a4f3850.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.deb46eb0.js",
+    "static/js/2.2a4f3850.chunk.js",
+    "static/css/main.19bced56.chunk.css",
+    "static/js/main.b3dc9fb2.chunk.js"
+  ]
+}
