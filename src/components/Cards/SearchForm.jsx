@@ -35,7 +35,7 @@ useEffect(() => {
     setCurrentPage(1)
 },[id])
 
-
+console.log(results)
 
 /* para paginacion*/
 const changePage = (newpage) => {
@@ -63,12 +63,16 @@ const pageAdd = (numero) => {
                           <Link to={item.media_type == "person" ? `/${item.media_type}/${item.id}` : `/${item.media_type}/${item.id}/info`}>
                      
                         
-                        {isLoading || item.poster_path === null || item.poster_path === undefined
+                        {isLoading || item.poster_path === null || item.profile_path === null
                             ? <div className="img-null-credits"><BsCardImage /> </div> 
-                            : <img  src={`${urlImg.base_url}${urlImg.size}${item.poster_path}`} alt=""/>
+                            : <img  src={item.media_type == "person" 
+                                ? `${urlImg.base_url}${urlImg.size}${item.profile_path}` 
+                                :`${urlImg.base_url}${urlImg.size}${item.poster_path}`} alt=""/>
                         }
+
                         
-                        {item.media_type == "tv" ? <h3>{item.name}</h3> : <h3>{item.title}</h3>}
+                        
+                        {item.media_type == "tv"||item.media_type == "person" ? <h3>{item.name}</h3> : <h3>{item.title}</h3>}
                         </Link>
                 </div>
                         )
