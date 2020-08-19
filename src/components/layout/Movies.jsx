@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Axios from "axios"
 import {  Link} from "react-router-dom";
 import CardContainer from "../Cards/CardContainer"
+import { BsArrowRightShort } from "react-icons/bs";
 
 
 const Movies = () => {
@@ -45,7 +46,7 @@ const Movies = () => {
             {listado && listado.map((item, i) => {
                return ( <div key={i}>
                             <Link to={`/movie/${item.name}`}>
-                             <h4> {item.title}</h4>
+                             <h4 className="title-category"> {item.title} <BsArrowRightShort className="title-arrow" /></h4>
                             </Link> 
                             <CardContainer  tipo={item.media_type} arrShows={item.resultados} />
                         </div>

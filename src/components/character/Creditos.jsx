@@ -40,7 +40,7 @@ const Creditos = ({}) => {/*urlImg, id*/
                          */}
                             {isLoading || item.poster_path === null || item.poster_path === undefined
                              ? <div className="img-null-credits"><BsCardImage /> </div> 
-                             : <img  src={`${urlImg.base_url}${urlImg.size}${item.poster_path}`} alt=""/>}
+                             : <div className="img-container"><img  src={`${urlImg.base_url}${urlImg.size}${item.poster_path}`} alt=""/></div>}
                         
                         
                             <h3>{item.title}</h3>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Axios from "axios"
 import CardContainer from "../Cards/CardContainer"
 import {  Link} from "react-router-dom";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const Tv = () => {
     const myApiKey = "ea62e617867b87697a8db24515b62c23"
@@ -44,7 +45,7 @@ const Tv = () => {
                
                return ( <div key={i}>
                             <Link to={`/tv/${item.name}`}>
-                              <h4> {item.title}</h4>
+                              <h4 className="title-category"> {item.title} <BsArrowRightShort className="title-arrow" /></h4>
                             </Link> 
                             <CardContainer tipo={item.media_type} arrShows={item.resultados} />
                         </div>

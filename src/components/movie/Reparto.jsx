@@ -37,7 +37,7 @@ const Reparto = ({}) => { /*tipo, urlImg, id*/
                        <Link to={`/person/${item.id}`}>
                          {isLoading || item.profile_path == null
                              ? <div className="img-null"><BsCardImage /> </div> 
-                            :< img src={`${urlImg.base_url}${urlImg.size}${item.profile_path}`} alt=""/>
+                            : <div className="img-container"> < img src={`${urlImg.base_url}${urlImg.size}${item.profile_path}`} alt=""/></div>
                             }
                        
                         <h3>{item.character}</h3>

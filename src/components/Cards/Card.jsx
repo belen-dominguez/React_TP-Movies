@@ -13,10 +13,10 @@ const Card = ({show, urlMain, urlFinal,tipo}) => {
                  {
                  urlFinal === null || urlFinal === undefined
                  ? <div className="img-null"><BsCardImage /> </div> 
-                 : <img src={`${urlMain.base_url}${urlMain.size}${urlFinal}`} alt=""/> 
+                 : <div className="img-container"> <img src={`${urlMain.base_url}${urlMain.size}${urlFinal}`} alt=""/> </div>
                  }
             
-                {tipo == "tv" ? <h3>{show.name}</h3> : <h3>{show.title}</h3>}
+                {tipo == "tv" ? <h3>{show.name}</h3> : <h3 >{show.title}</h3>}
             </Link>
         </div>
     )

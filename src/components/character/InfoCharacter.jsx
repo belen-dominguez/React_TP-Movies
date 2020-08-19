@@ -7,9 +7,11 @@ const InfoCharacter = ({urlImg, data, external}) => {
     return (
         
             <div className="character" style={isMobile ? {flexDirection: "column", marginBottom: "5rem"} : null}>
-                <img  
-                src={`${urlImg.base_url}${urlImg.size}${data.profile_path}`} alt=""
-                style={isMobile ? {width: "100%", marginBottom: "2rem"} : null}/>
+                <div className="img-container-actor">
+                    <img  
+                    src={`${urlImg.base_url}${urlImg.size}${data.profile_path}`} alt=""
+                    style={isMobile ? {width: "100%", marginBottom: "2rem"} : null}/>
+                </div> 
                 <div className="character-info" style={isMobile ? {width: "100%"} : null}>
                     <div >
                         <h2>{data.name}</h2>

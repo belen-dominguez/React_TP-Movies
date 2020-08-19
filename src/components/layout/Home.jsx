@@ -3,7 +3,9 @@ import axios from "axios";
 import {  Link} from "react-router-dom";
 import CardContainer from "../Cards/CardContainer"
 import { FiFilter } from "react-icons/fi";
+import { BsArrowRightShort } from "react-icons/bs";
 import { useGetResults } from "../../utils/hooks/useGetResults";
+
 
 
 const Home = () => {
@@ -44,12 +46,12 @@ const Home = () => {
         <div>
            
            <Link to="/movie/trending">
-               <h4>Peliculas que son Tendencia</h4>
+               <h4 className="title-category">Peliculas que son Tendencia <BsArrowRightShort className="title-arrow" /></h4>
            </Link>
            <CardContainer tipo="movie" arrShows={trendingMovies} />
 
             <Link to="/tv/trending">
-              <h4>  Series que son Tendencia</h4>
+              <h4 className="title-category">  Series que son Tendencia <BsArrowRightShort className="title-arrow" /></h4>
             </Link>
             <CardContainer tipo="tv" arrShows={trendingTV} />
 
