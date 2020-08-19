@@ -34,13 +34,6 @@ const CardContainer = ({arrShows, tipo}) => {
           
           
           }
-{/* 
-         {arrShows && arrShows.map( (item, i) => {
-               
-               return (
-                 <Card key={i} show={item} tipo={tipo} urlMain={urlImg} urlFinal={item.poster_path}/>
-               )
-            }).slice(0,5)}  */}
         
           
         </div>

@@ -19,7 +19,7 @@ const Similares =({urlImg})=> {/*tipo, urlImg, id*/
        
     },[])
 
-    console.log(results)
+   
     return (
         <div>
            {results && <CardFull tipo={from} arrShows={results.results}/>}

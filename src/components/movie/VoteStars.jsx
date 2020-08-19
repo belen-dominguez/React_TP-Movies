@@ -8,7 +8,7 @@ const ICONS = {
 }
 
 const renderIcons = (icon,  numero) => {
-    console.log(numero)
+   
     let icons
     let number = Math.round(numero)
     const totalIcons = 5

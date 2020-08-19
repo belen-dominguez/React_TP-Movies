@@ -14,12 +14,11 @@ import { useGetImg } from '../../utils/hooks/useGetImg';
 const HomeMovie = ({tipo, id}) => { /* tipo es movie o tv*/
     const myApiKey = "ea62e617867b87697a8db24515b62c23"
     const [results, setResults] = useState([])
-    //const [urlImg, setUrlImg] = useState({})
 
     let { path, url } = useRouteMatch();
 
     const {from, uid} = useParams()
-    console.log(from, uid,  url)
+   
 
     let sectionL = url.split("/")
 

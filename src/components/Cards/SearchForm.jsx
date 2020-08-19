@@ -35,7 +35,7 @@ useEffect(() => {
     setCurrentPage(1)
 },[id])
 
-console.log(results)
+
 
 /* para paginacion*/
 const changePage = (newpage) => {

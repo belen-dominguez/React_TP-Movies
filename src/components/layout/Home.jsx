@@ -3,6 +3,7 @@ import axios from "axios";
 import {  Link} from "react-router-dom";
 import CardContainer from "../Cards/CardContainer"
 import { FiFilter } from "react-icons/fi";
+import { useGetResults } from "../../utils/hooks/useGetResults";
 
 
 const Home = () => {
@@ -10,15 +11,16 @@ const Home = () => {
     const [results, setResults ]= useState([])
     const [trendingMovies, setTrendingMovies] = useState([])
     const [trendingTV, setTrendingTV] = useState([])
+    //const [results, isLoading, isError] = useGetResults("trendingAll")
     
 
     
+    console.log(results)
     
     useEffect(() => {
         axios
         .get(`https://api.themoviedb.org/3/trending/all/week?api_key=${myApiKey}`)
         .then((resp) => {
-            console.log(resp)
             setResults(resp.data.results)
         })
     }, [ ])

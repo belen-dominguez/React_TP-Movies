@@ -21,7 +21,6 @@ const Info =({tipo, urlImg, id}) => { /*tipo, urlImg, id*/
         Axios
         .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
         .then(resp => {
-            console.log(resp.data)
             setResults(resp.data)
         })
        
@@ -65,16 +64,16 @@ const Info =({tipo, urlImg, id}) => { /*tipo, urlImg, id*/
                     <p>Recaudación: {results.revenue}</p>
                     </>
                 }
-                <p>Generos: {results.genres && results.genres.map(item =>{
+                <p>Generos: {results.genres && results.genres.map((item, i) =>{
                     // return  <span>{item.name} </span>
                     return (
-                        <Link to={`/genre/${from}/${item.name}`}>
+                        <Link key={i} to={`/genre/${from}/${item.name}`}>
                             <span>{item.name} </span>
                         </Link>
                     )
                 })}</p>
-                <p>Produccion: {results.production_companies && results.production_companies.map(item => {
-                   return  <span>{item.name} </span>
+                <p>Produccion: {results.production_companies && results.production_companies.map((item,i) => {
+                   return  <span key={i}>{item.name} </span>
                 })}</p>
                 <div>
                     {external && <External external={external} />}

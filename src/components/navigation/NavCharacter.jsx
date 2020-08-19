@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { useWidth } from '../../utils/hooks/useWidth'
 
 const NavCharacter = ({}) => {
@@ -8,13 +8,13 @@ const NavCharacter = ({}) => {
     const url = `/person/${select}`
 
     return (
-        <div className="navCharacter" style={isMobile ? {width: "60%"} : null}>
-            <Link to={`${url}`}>
+        <div className="navCharacter"  style={isMobile ? {width: "60%"} : null}>
+            <NavLink to={`${url}`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}}>
                 INFORMACION
-            </Link>
-            <Link to={`${url}/credits`}>
+            </NavLink>
+            <NavLink to={`${url}/credits`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}}>
                 CREDITOS
-            </Link>
+            </NavLink>
             
         </div>
     )

@@ -1,40 +1,43 @@
 import React from 'react'
-import {   Link, useParams} from "react-router-dom";
+import {   Link, useParams, NavLink} from "react-router-dom";
 import { useWidth } from '../../utils/hooks/useWidth';
 
 const MovieNav =({url, tipo, id}) => {
    
-
+   
     const [isMobile] = useWidth()
     
     const {from, uid, section} = useParams()
     
-    
+    const prueba = (e) => {
+        console.log(e.target)
+        
+    }
 
     return (
         <div className="navDetail" style={isMobile ? {width: "80%", fontSize:"1.5rem", marginTop:"3rem" }: null}>
-            <Link to={`/${from}/${uid}/info`}>
+            <NavLink to={`/${from}/${uid}/info`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}} >
                 INFO
-            </Link>
-            <Link to={`/${from}/${uid}/reparto`}>
+            </NavLink>
+            <NavLink to={`/${from}/${uid}/reparto`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}}>
                 REPARTO
-            </Link>
+            </NavLink>
             {from == "movie" && (
 
-                <Link to={`/${from}/${uid}/videos`}>
+                <NavLink to={`/${from}/${uid}/videos`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}}>
                     VIDEOS 
-                </Link>
+                </NavLink>
             )}
             {from == "tv" && (
 
-                <Link to={`/${from}/${uid}/episodios`}>
+                <NavLink to={`/${from}/${uid}/episodios`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}}>
                     EPISODIOS
-                </Link>
+                </NavLink>
             
             )}
-            <Link to={`/${from}/${uid}/similares`}>
+            <NavLink to={`/${from}/${uid}/similares`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}}>
                 SIMILARES 
-            </Link>
+            </NavLink>
         </div>
     )
 }

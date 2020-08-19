@@ -24,7 +24,7 @@ export const  useGet = url => {
         
     }, [url])
 
-    return[results, isLoading, isError]
+    return[results, isLoading, isError] 
 }
 
 

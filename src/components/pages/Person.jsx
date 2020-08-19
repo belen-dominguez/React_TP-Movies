@@ -30,7 +30,7 @@ const Person = ({}) => {
         Axios
         .get(`https://api.themoviedb.org/3/person/${select}/external_ids?api_key=${myApiKey}`)
         .then(resp => {
-            console.log(resp.data)
+           
             setExternal(resp.data)
         })
 
