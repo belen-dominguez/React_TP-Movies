@@ -16,8 +16,8 @@ const DisplayAll = ({}) => {
     const url = `/${from}/${category}`
     const urlGenre = `/genre/${from}/${genre}`
 
-
-    const myApiKey = "ea62e617867b87697a8db24515b62c23"
+    const {URL_BASE} = require("../../const/api")
+    //const myApiKey = "ea62e617867b87697a8db24515b62c23"
      const [results, setResults] = useState([])
      const [genreList, setGenreLis] = useState([])
      let selectedId;
@@ -36,7 +36,7 @@ const DisplayAll = ({}) => {
         if(category  == "trending"){ 
             console.log(from)
             Axios
-            .get(`https://api.themoviedb.org/3/trending/${from}/week?api_key=${myApiKey}&page=${currentPage}`)
+            .get(`https://api.themoviedb.org/3/trending/${from}/week?api_key=${process.env.REACT_APP_API_KEY}&page=${currentPage}`)
             .then((resp) => {
                 //console.log(resp)
                 setResults(resp.data.results)
@@ -46,7 +46,7 @@ const DisplayAll = ({}) => {
         else if(genre){
             console.log(genre)
             Axios
-            .get(`https://api.themoviedb.org/3/genre/${from}/list?api_key=${myApiKey}`)
+            .get(`https://api.themoviedb.org/3/genre/${from}/list?api_key=${process.env.REACT_APP_API_KEY}`)
             .then((resp) => {
                 setGenreLis(resp.data.genres)
             })
@@ -55,7 +55,7 @@ const DisplayAll = ({}) => {
         else{
             
             Axios
-            .get(`https://api.themoviedb.org/3/${from}/${category}?api_key=${myApiKey}&page=${currentPage}`)
+            .get(`https://api.themoviedb.org/3/${from}/${category}?api_key=${process.env.REACT_APP_API_KEY}&page=${currentPage}`)
             .then((resp) => {
                 //console.log(resp.data)
                 setResults(resp.data.results)
@@ -75,13 +75,11 @@ const DisplayAll = ({}) => {
 
        
        selectedId = genreResult[0]
-    //    console.log(selectedId)
-    //    selectedId && console.log(selectedId.id)
 
        if(selectedId){
            
            Axios
-           .get(`https://api.themoviedb.org/3/discover/${from}?api_key=${myApiKey}&with_genres=${selectedId.id}&page=${currentPage}`)
+           .get(`https://api.themoviedb.org/3/discover/${from}?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${selectedId.id}&page=${currentPage}`)
            .then((resp) => {
                //console.log(resp.data)
                setResults(resp.data.results)

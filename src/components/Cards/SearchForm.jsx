@@ -11,7 +11,7 @@ const SearchForm = ({}) => {
   const myApiKey = "ea62e617867b87697a8db24515b62c23"
     const [results, setResults] = useState([])
     const [isMobile] = useWidth()
-    const [urlImg, isLoading, isError] = useGetImg(3) 
+    const [urlImg, isLoadingImg, isErrorImg] = useGetImg(3) 
 
     /*paginacion */
     const [currentPage, setCurrentPage] = useState(1)
@@ -63,7 +63,7 @@ const pageAdd = (numero) => {
                           <Link to={item.media_type == "person" ? `/${item.media_type}/${item.id}` : `/${item.media_type}/${item.id}/info`}>
                      
                         
-                        {isLoading || item.poster_path === null || item.profile_path === null
+                        {isLoadingImg || item.poster_path === null || item.profile_path === null
                             ? <div className="img-null-credits"><BsCardImage /> </div> 
                             : <img  src={item.media_type == "person" 
                                 ? `${urlImg.base_url}${urlImg.size}${item.profile_path}` 

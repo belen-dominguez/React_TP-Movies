@@ -9,7 +9,7 @@ const CardContainer = ({arrShows, tipo}) => {
    
   const isMobile = useWidth()
   
-  const [urlImg, isLoading, isError] = useGetImg(3) 
+  const [urlImg, isLoadingImg, isErrorImg] = useGetImg(3) 
   
 
     

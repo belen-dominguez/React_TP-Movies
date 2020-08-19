@@ -9,11 +9,12 @@ import Episodios from "../movie/Episodios"
 import Similares from "../movie/Similares"
 import Videos from "../movie/Videos"
 import { useGetImg } from '../../utils/hooks/useGetImg';
+import { useGet } from '../../utils/hooks/useGet';
 
 
 const HomeMovie = ({tipo, id}) => { /* tipo es movie o tv*/
-    const myApiKey = "ea62e617867b87697a8db24515b62c23"
-    const [results, setResults] = useState([])
+    // const myApiKey = "ea62e617867b87697a8db24515b62c23"
+    // const [results, setResults] = useState([])
 
     let { path, url } = useRouteMatch();
 
@@ -22,20 +23,22 @@ const HomeMovie = ({tipo, id}) => { /* tipo es movie o tv*/
 
     let sectionL = url.split("/")
 
-    const [urlImg, isLoading, isError] = useGetImg(4) 
-    
+    const [urlImg, isLoadingImg, isErrorImg] = useGetImg(4) 
+
+    const [results, isLoading, isError] = useGet(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${process.env.REACT_APP_API_KEY}`, "homeMovie")
 
   
 
-    useEffect(() => { 
-        Axios
-        .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
-        .then(resp => {
-            setResults(resp.data)
-        })
+    // useEffect(() => { 
+    //     Axios
+    //     .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
+    //     .then(resp => {
+    //         setResults(resp.data)
+    //     })
 
     
-    },[]) 
+    // },[]) 
+
     
     return (
         <div>

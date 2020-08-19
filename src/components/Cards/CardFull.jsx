@@ -12,7 +12,7 @@ const CardFull = ({category, tipo, arrShows, genre}) => {
     /* esto es un cuastom hook*/
     const title = useTitle(tipo, category)
     const [isMobile] = useWidth()
-    const [urlImg, isLoading, isError] = useGetImg(3)
+    const [urlImg, isLoadingImg, isErrorImg] = useGetImg(3)
 
     
     

@@ -4,6 +4,8 @@ import { useWidth } from '../../utils/hooks/useWidth'
 
 const InfoCharacter = ({urlImg, data, external}) => {
     const [isMobile] = useWidth()
+
+    
     return (
         
             <div className="character" style={isMobile ? {flexDirection: "column", marginBottom: "5rem"} : null}>

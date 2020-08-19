@@ -4,36 +4,43 @@ import VoteStars from './VoteStars'
 import External from "./External"
 import { Link, useParams } from 'react-router-dom'
 import { useWidth } from '../../utils/hooks/useWidth'
+import { useGet } from '../../utils/hooks/useGet'
 
 
 
-const Info =({tipo, urlImg, id}) => { /*tipo, urlImg, id*/
+const Info =({tipo, urlImg, id}) => { 
     const {from, uid} = useParams()
     const [isMobile] = useWidth()
     
 
     //console.log(tipo, id)
-    const myApiKey = "ea62e617867b87697a8db24515b62c23"
-    const [results, setResults] = useState([])
-    const [external, setExternal] = useState([])
+    // const myApiKey = "ea62e617867b87697a8db24515b62c23"
+    // const [results, setResults] = useState([])
+   // const [external, setExternal] = useState([])
 
-    useEffect(() => {
-        Axios
-        .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
-        .then(resp => {
-            setResults(resp.data)
-        })
+    const {URL_BASE} = require("../../const/api")
+    const [results, isLoading, isError] = useGet(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${process.env.REACT_APP_API_KEY}`, "info")
+    const [,,,external] = useGet(`https://api.themoviedb.org/3/${from}/${uid}/external_ids?api_key=${process.env.REACT_APP_API_KEY}`, "linksExternos")
+
+    
+
+    // useEffect(() => {
+    //     Axios
+    //     .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
+    //     .then(resp => {
+    //         setResults(resp.data)
+    //     })
        
-        /*links externos*/
-        Axios
-        .get(`https://api.themoviedb.org/3/${from}/${uid}/external_ids?api_key=${myApiKey}`)
-        .then(resp => {
+    //     /*links externos*/
+    //     Axios
+    //     .get(`https://api.themoviedb.org/3/${from}/${uid}/external_ids?api_key=${myApiKey}`)
+    //     .then(resp => {
            
-            setExternal(resp.data)
-        })
+    //         setExternal(resp.data)
+    //     })
 
        
-    },[])
+    // },[])
 
     return (
         <div>
