@@ -23,93 +23,75 @@ function App() {
  
 
   return (
+    <Router>
     <div className="App">
-     
-      <Router>
         <Header />
 
         <Switch>
-        
-          <Route exact path="/">
-              <Home />
-          </Route>
-          <Route exact path="/person/:select">
-              <Person />
-          </Route>
-          <Route  path="/person/:select/credits">
-              <Person />
-          </Route>
-          <Route exact path="/movie">
-              <Movies />
-          </Route>
-          <Route exact path="/tv">
-              <Tv />
-          </Route>
-          <Route exact path="/genre/:from/:genre/">
-              <DisplayAll />
-          </Route>
-          <Route  exact path="/genre/:from/:genre/:num">
-              <DisplayAll  />
-          </Route>
-          <Route exact path="/search/:id">
-              <SearchForm  />
-          </Route>
-          <Route exact path="/:from/:uid/info">
-              <HomeMovie />
-          </Route>
-          <Route exact path="/:from/:uid/reparto">
-              <HomeMovie />
-          </Route>
-          <Route exact path="/:from/:uid/similares">
-              <HomeMovie />
-          </Route>
-          <Route exact path="/:from/:uid/videos">
-              <HomeMovie />
-          </Route>
-          <Route exact path="/:from/:uid/episodios">
-              <HomeMovie />
-          </Route>
-          
-          
-          
-          <Route exact path="/search/:id/:num">
-              <SearchForm />
-          </Route>
-                
+            <Route exact path="/">
+                <Home />
+            </Route>
 
-          <Route exact path="/:from/:category/">
-              <DisplayAll />
-          </Route>
-          
+            {/* <Route exact path="/person/:select/:child">
+                <Person />
+            </Route> */}
 
-
-          <Route exact path="/:from/:category/:num">
-              <DisplayAll />
-          </Route>
-          
-          
-         
-          
-          {/* <Route  path="/:from/:id/reparto">
-              <Reparto />
-          </Route>
-          <Route  path="/:from/:id/similares">
-              <Similares />
-          </Route>
-          <Route  path="/:from/:id/video">
-              <Videos />
-          </Route>
-          <Route  path="/:from/:id/episodios">
-              <Episodios />
-          </Route> */}
-          
-         
-        
+            <Route exact path="/person/:select/info">
+                <Person />
+            </Route>
+            <Route exact path="/person/:select/credits">
+                <Person />
+            </Route>
+            <Route exact path="/movie">
+                <Movies />
+            </Route>
+            <Route exact path="/tv">
+                <Tv />
+            </Route>
+            
+            <Route exact path="/genre/:from/:genre/">
+                <DisplayAll />
+            </Route>
+            <Route  exact path="/genre/:from/:genre/:num">
+                <DisplayAll  />
+            </Route>
+            <Route exact path="/search/:id">
+                <SearchForm  />
+            </Route>
+           
+            <Route exact path="/:from/:uid/info">
+                <HomeMovie />
+            </Route>
+            <Route exact path="/:from/:uid/reparto">
+                <HomeMovie />
+            </Route>
+            <Route exact path="/:from/:uid/similares">
+                <HomeMovie />
+            </Route>
+            <Route exact path="/:from/:uid/videos">
+                <HomeMovie />
+            </Route>
+            <Route exact path="/:from/:uid/episodios">
+                <HomeMovie />
+            </Route>
+            
+            {/* <Route exact path="/:from/:uid/:child">
+                <HomeMovie />
+            </Route> */}
+            <Route exact path="/search/:id/:num">
+                <SearchForm />
+            </Route>
+            
+            
+             <Route exact path="/:from/:category/">
+                <DisplayAll />
+            </Route>
+            <Route exact path="/:from/:category/:num">
+                <DisplayAll />
+            </Route>
          </Switch>
-
-      </Router>
-
     </div>
+    </Router>
   );
 }
 

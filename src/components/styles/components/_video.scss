@@ -6,3 +6,10 @@
     margin: 1rem;
     border: none;
 }
+
+@media (max-width: 450px) {
+    
+    .video-container{
+        margin-bottom: 9rem;
+    }
+}

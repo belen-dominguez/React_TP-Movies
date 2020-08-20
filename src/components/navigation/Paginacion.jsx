@@ -12,8 +12,7 @@ const Paginacion =({url, urlGenre, total, page, changePage, pageAdd}) => {
     let prueba = []
     
    const {from, category, num, uid} = useParams() 
-
-   const [isMobile] = useWidth()
+    const [isMobile] = useWidth()
    
 
     /*crear array con el total de elementos a imprimir*/

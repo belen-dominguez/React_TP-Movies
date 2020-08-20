@@ -17,7 +17,6 @@ const DisplayAll = ({}) => {
     const urlGenre = `/genre/${from}/${genre}`
 
     const {URL_BASE} = require("../../const/api")
-    //const myApiKey = "ea62e617867b87697a8db24515b62c23"
      const [results, setResults] = useState([])
      const [genreList, setGenreLis] = useState([])
      let selectedId;
@@ -34,7 +33,6 @@ const DisplayAll = ({}) => {
     useEffect(() => {
 
         if(category  == "trending"){ 
-            console.log(from)
             Axios
             .get(`https://api.themoviedb.org/3/trending/${from}/week?api_key=${process.env.REACT_APP_API_KEY}&page=${currentPage}`)
             .then((resp) => {
@@ -44,7 +42,6 @@ const DisplayAll = ({}) => {
             })
         }
         else if(genre){
-            console.log(genre)
             Axios
             .get(`https://api.themoviedb.org/3/genre/${from}/list?api_key=${process.env.REACT_APP_API_KEY}`)
             .then((resp) => {

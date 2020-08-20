@@ -13,4 +13,33 @@
     .character-info {
         width: 60%;
     }
+    .img-null-character {
+        width: 29rem;
+        background-color: #23272a;
+        padding-top: 40%;
+        position: relative;
+        svg{
+            position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             width: 45px;
+             color: rgb(220, 221, 222);
+         }
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .character {
+        .img-container-actor{
+            width: 85%;
+             margin: 2rem auto;
+        }
+        .img-null-character{
+            height: 39rem;
+            margin: 2rem auto;
+        }
+    }
+    
 }

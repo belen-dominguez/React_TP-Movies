@@ -7,34 +7,34 @@ import { useGet } from '../../utils/hooks/useGet'
 
 const Episodios = ({urlImg}) => {
     const {from, uid} = useParams()
-    // const myApiKey = "ea62e617867b87697a8db24515b62c23" 
-    // const [results, setResults] = useState([])
+     const myApiKey = "ea62e617867b87697a8db24515b62c23" 
+     const [results, setResults] = useState([])
     const [totalSeason, setTotalSeason] = useState({})
     const [season, setSeason] = useState(1)
     const [temporadasAll, setTemporadasAll] = useState([])
     const [isMobile] = useWidth()
-    const {URL_BASE} = require("../../const/api")
-    const [results, isLoading, isError] = useGet(`https://api.themoviedb.org/3/${from}/${uid}/season/${season}?api_key=${process.env.REACT_APP_API_KEY}`, "episodes")
+    //const {URL_BASE} = require("../../const/api")
+    // const [results, isLoading, isError] = useGet(`https://api.themoviedb.org/3/${from}/${uid}/season/${season}?api_key=${process.env.REACT_APP_API_KEY}`, "episodes")
 
     useEffect(() => {
         /*cant de temporadas*/
         Axios
-        .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${process.env.REACT_APP_API_KEY}`)
+        .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
         .then(resp => {
             
             setTotalSeason(resp.data.number_of_seasons)
         })
         /*info po temporada*/
-        // Axios
-        // .get(`https://api.themoviedb.org/3/${from}/${uid}/season/${season}?api_key=${myApiKey}`)
-        // .then(resp => {
+        Axios
+        .get(`https://api.themoviedb.org/3/${from}/${uid}/season/${season}?api_key=${myApiKey}`)
+        .then(resp => {
             
-        //     setResults(resp.data)
-        // })
+            setResults(resp.data)
+        })
 
     },[season])
 
-   
+   console.log(season)
     
    useEffect(() => {
     for(let i = 0; i < totalSeason; i++){

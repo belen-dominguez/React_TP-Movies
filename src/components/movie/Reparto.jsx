@@ -18,26 +18,13 @@ const Reparto = ({}) => { /*tipo, urlImg, id*/
 
     
 
-    // useEffect(() => {
-        
-    //     Axios
-    //     .get(`https://api.themoviedb.org/3/${from}/${uid}/credits?api_key=${myApiKey}`)
-    //     .then(resp => {
-    //         setResults(resp.data)
-    //     })
-        
-    
-       
-    // },[])
-
-
     return (
         <div className="cards-container">
            {results.cast && results.cast.map((item,i) =>{
               
                return (
                    <div className="card-container"  style={isMobile ? {maxWidth: "50%"} : null} key={i}>
-                       <Link to={`/person/${item.id}`}>
+                       <Link to={`/person/${item.id}/info`}>
                          {isLoading || item.profile_path == null
                              ? <div className="img-null"><BsCardImage /> </div> 
                             : <div className="img-container"> < img src={`${urlImg.base_url}${urlImg.size}${item.profile_path}`} alt=""/></div>

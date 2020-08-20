@@ -60,7 +60,7 @@ const pageAdd = (numero) => {
                <div key={i} className="card-container" style={isMobile ? {width:"50%"} : null}>
                   
                        
-                          <Link to={item.media_type == "person" ? `/${item.media_type}/${item.id}` : `/${item.media_type}/${item.id}/info`}>
+                          <Link to={item.media_type == "person" ? `/${item.media_type}/${item.id}/info` : `/${item.media_type}/${item.id}/info`}>
                      
                         
                         {isLoadingImg || item.poster_path === null || item.profile_path === null
