@@ -5,8 +5,8 @@ import {  Link} from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const Tv = () => {
-    const myApiKey = "ea62e617867b87697a8db24515b62c23"
-
+    //const myApiKey = "ea62e617867b87697a8db24515b62c23"
+    const {URL_BASE} = require("../../const/api")
     const categorias = [
         {name: "popular", title: "Series populares", media_type: "tv",  resultados: []}, 
         {name: "top_rated", title: "Series con mejores criticas", media_type: "tv", resultados: []}, 
@@ -21,7 +21,7 @@ const Tv = () => {
         listado.forEach((categoria) => {
             
             Axios
-            .get(`https://api.themoviedb.org/3/tv/${categoria.name}?api_key=${myApiKey}`)
+            .get(`https://api.themoviedb.org/3/tv/${categoria.name}?api_key=${process.env.REACT_APP_API_KEY}`)
             .then(resp => {
                 
                 categoria.resultados = resp.data.results

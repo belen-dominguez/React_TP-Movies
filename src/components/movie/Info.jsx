@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Axios from 'axios'
+import React from 'react'
 import VoteStars from './VoteStars'
 import External from "./External"
 import { Link, useParams } from 'react-router-dom'
@@ -13,10 +12,6 @@ const Info =({tipo, urlImg, id}) => {
     const [isMobile] = useWidth()
     
 
-    //console.log(tipo, id)
-    // const myApiKey = "ea62e617867b87697a8db24515b62c23"
-    // const [results, setResults] = useState([])
-   // const [external, setExternal] = useState([])
 
     const {URL_BASE} = require("../../const/api")
     const [results, isLoading, isError] = useGet(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${process.env.REACT_APP_API_KEY}`, "info")
@@ -24,23 +19,6 @@ const Info =({tipo, urlImg, id}) => {
 
     
 
-    // useEffect(() => {
-    //     Axios
-    //     .get(`https://api.themoviedb.org/3/${from}/${uid}?api_key=${myApiKey}`)
-    //     .then(resp => {
-    //         setResults(resp.data)
-    //     })
-       
-    //     /*links externos*/
-    //     Axios
-    //     .get(`https://api.themoviedb.org/3/${from}/${uid}/external_ids?api_key=${myApiKey}`)
-    //     .then(resp => {
-           
-    //         setExternal(resp.data)
-    //     })
-
-       
-    // },[])
 
     return (
         <div>
@@ -89,7 +67,7 @@ const Info =({tipo, urlImg, id}) => {
             
             </>)}
         </div>
-        {/* {external && <External external={external} />} */}
+      
         </div>
     )
 }

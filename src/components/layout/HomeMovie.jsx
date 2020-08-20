@@ -10,7 +10,8 @@ import { useGetImg } from '../../utils/hooks/useGetImg';
 import { useGet } from '../../utils/hooks/useGet';
 
 
-const HomeMovie = ({tipo, id}) => { /* tipo es movie o tv*/
+const HomeMovie = ({tipo, id}) => { 
+    const {URL_BASE} = require("../../const/api")
     let { path, url } = useRouteMatch();
     const {from, uid} = useParams()
     let sectionL = url.split("/")

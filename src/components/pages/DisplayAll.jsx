@@ -1,8 +1,7 @@
 import React, { useState, useEffect}  from "react"
 import CardFull from "../Cards/CardFull"
-import HomeMovie from "../layout/HomeMovie"
 import Paginacion from "../navigation/Paginacion"
-import {    useParams, useRouteMatch  } from "react-router-dom";
+import {    useParams } from "react-router-dom";
 import Axios from "axios";
 
 

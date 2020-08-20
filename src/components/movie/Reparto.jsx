@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Axios from 'axios'
+import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useWidth } from '../../utils/hooks/useWidth'
 import { useGetImg } from '../../utils/hooks/useGetImg'
@@ -8,10 +7,9 @@ import { useGet } from '../../utils/hooks/useGet'
 
 const Reparto = ({}) => { /*tipo, urlImg, id*/
     const {URL_BASE} = require("../../const/api")
-    //const myApiKey = "ea62e617867b87697a8db24515b62c23"
+   
     const {from, uid} = useParams()
     
-    //const [results, setResults] = useState([])
     const [isMobile] = useWidth()
     const [urlImg, isLoadingImg, isErrorImg] = useGetImg(4) 
     const [results, isLoading, isError] = useGet(`https://api.themoviedb.org/3/${from}/${uid}/credits?api_key=${process.env.REACT_APP_API_KEY}`, "reparto")

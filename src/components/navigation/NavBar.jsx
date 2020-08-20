@@ -1,5 +1,5 @@
 import React from "react"
-import {   BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
+import {    Link} from "react-router-dom";
 import { AiOutlineHome, AiOutlineVideoCamera,  } from "react-icons/ai";
 import { FiMonitor } from "react-icons/fi";
 

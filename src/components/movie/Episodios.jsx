@@ -34,7 +34,7 @@ const Episodios = ({urlImg}) => {
 
     },[season])
 
-   console.log(season)
+  
     
    useEffect(() => {
     for(let i = 0; i < totalSeason; i++){
@@ -48,7 +48,7 @@ const Episodios = ({urlImg}) => {
     setSeason(e.target.value)
    }
 
-//console.log(results)
+
 
     return (
         <div >

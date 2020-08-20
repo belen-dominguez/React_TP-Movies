@@ -5,7 +5,7 @@ import { BsCardImage } from "react-icons/bs";
 
 
 
-const InfoCharacter = ({urlImg, data, external}) => { /*{urlImg, data, external}*/
+const InfoCharacter = ({urlImg, data, external}) => { 
     const [isMobile] = useWidth()
     
     return (

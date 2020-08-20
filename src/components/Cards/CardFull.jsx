@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Card from "./Card"
-import Axios from "axios"
 import { useTitle } from "../../utils/hooks/useTitle";
-
 import CardMobile from "./CardMobile";
 import { useWidth } from "../../utils/hooks/useWidth";
 import { useGetImg } from "../../utils/hooks/useGetImg";

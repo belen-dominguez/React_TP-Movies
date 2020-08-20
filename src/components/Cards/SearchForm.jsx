@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link, useRouteMatch } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Paginacion from "../navigation/Paginacion"
 import { useWidth } from '../../utils/hooks/useWidth'
@@ -17,13 +17,13 @@ const SearchForm = ({}) => {
     const [currentPage, setCurrentPage] = useState(1)
      const [totalPage, setTotalPage] = useState("")
     const url = `/search/${id}`; 
-
+    const {URL_BASE} = require("../../const/api")
 
 
 useEffect(() => {
     
     Axios
-    .get(`https://api.themoviedb.org/3/search/multi?api_key=${myApiKey}&query=${id}&page=${currentPage}`)
+    .get(`https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&query=${id}&page=${currentPage}`)
     .then(resp => {
         setResults(resp.data)
         setTotalPage(resp.data.total_pages)/* paginacion*/

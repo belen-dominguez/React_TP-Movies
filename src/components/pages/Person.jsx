@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import {   BrowserRouter as Router,  Switch,  Route,   useRouteMatch, useParams, NavLink} from "react-router-dom";
-import Axios from 'axios'
+import React from 'react'
+import {     useRouteMatch, useParams} from "react-router-dom";
 import NavCharacter from "../navigation/NavCharacter"
 import Creditos from "../character/Creditos"
 import InfoCharacter from "../character/InfoCharacter"

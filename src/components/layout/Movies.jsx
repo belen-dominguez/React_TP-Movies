@@ -6,8 +6,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 
 const Movies = () => {
-    const myApiKey = "ea62e617867b87697a8db24515b62c23"
-
+    const {URL_BASE} = require("../../const/api")
     const categorias = [
         {name: "popular", title: "Peliculas populares",media_type: "movie", resultados: []}, 
         {name: "top_rated", title: "Peliculas con mejores criticas",media_type: "movie", resultados: []}, 
@@ -23,7 +22,7 @@ const Movies = () => {
         listado.forEach((categoria) => {
             
             Axios
-            .get(`https://api.themoviedb.org/3/movie/${categoria.name}?api_key=${myApiKey}`)
+            .get(`https://api.themoviedb.org/3/movie/${categoria.name}?api_key=${process.env.REACT_APP_API_KEY}`)
             .then(resp => {
                 
                 categoria.resultados = resp.data.results

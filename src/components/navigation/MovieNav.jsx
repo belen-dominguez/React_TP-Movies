@@ -9,11 +9,7 @@ const MovieNav =({url, tipo, id}) => {
     
     const {from, uid, section} = useParams()
     
-    const prueba = (e) => {
-        console.log(e.target)
-        
-    }
-
+    
     return (
         <div className="navDetail" style={isMobile ? {width: "80%", fontSize:"1.5rem", marginTop:"3rem" }: null}>
             <NavLink to={`/${from}/${uid}/info`} activeStyle={{borderBottom: "2px solid #fff", paddingBottom: "1rem"}} >
